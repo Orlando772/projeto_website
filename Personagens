@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagens - JoJo's Bizarre Adventure</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="stands.html">Stands</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="personagens">
+        <h1>Aos Heróis e Vilões</h1>
+        <div class="personagem">
+            <img src="personagem1.jpg" alt="Imagem do Personagem 1">
+            <h2>Nome do Personagem</h2>
+            <p><strong>Idade:</strong> 28</p>
+            <p><strong>Ocupação:</strong> Detetive / Mercenário</p>
+            <h3>Stand: [Nome do Stand]</h3>
+            <p>Descrição: [Breve descrição do personagem]</p>
+        </div>
+
+        <div class="personagem">
+            <img src="personagem2.jpg" alt="Imagem do Personagem 2">
+            <h2>Nome do Personagem 2</h2>
+            <p><strong>Idade:</strong> 35</p>
+            <p><strong>Ocupação:</strong> Mercenário / Caçador de Stands</p>
+            <h3>Stand: [Nome do Stand 2]</h3>
+            <p>Descrição: [Breve descrição do personagem]</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [Seu Nome ou Nome do Projeto]. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
 
