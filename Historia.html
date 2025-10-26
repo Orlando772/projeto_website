@@ -218,7 +218,7 @@
             influenciado gerações de artistas e consolidado JoJo’s Bizarre Adventure* como uma das séries mais
             originais e icônicas da história.</p>
 
-            <h1>O por que do sucesso de JoJo</h1>
+        <h1>O por que do sucesso de JoJo</h1>
         <p>O sucesso de JoJo’s Bizarre Adventure vem da mistura perfeita entre originalidade, arte e ousadia. Criado
             por Hirohiko Araki, o mangá se destaca por um estilo visual totalmente único, com poses teatrais, cores
             vibrantes e personagens que parecem saídos de passarelas de moda ou de pinturas clássicas. Essa estética
@@ -260,6 +260,87 @@
                 </a>
             </div>
         </div>
+        <style>
+            #biteButton {
+                display: block;
+                margin: 50px auto;
+                padding: 15px 35px;
+                background: #ff3366;
+                color: white;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+                font-size: 1.3em;
+                box-shadow: 0 0 25px #ff66aa;
+                transition: all 0.2s ease;
+            }
+
+            #biteButton:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 40px #ff99cc;
+            }
+
+
+            #explosion {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle, #fff 0%, #ff3366 30%, #000 100%);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.6s;
+                z-index: 9999;
+            }
+
+            #explosion::after {
+                content: "B I T E  T H E  D U S T";
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 3em;
+                color: white;
+                text-shadow: 0 0 25px #ff3366, 0 0 50px #fff;
+                font-weight: bold;
+                letter-spacing: 5px;
+            }
+
+            @keyframes flash {
+
+                0%,
+                100% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+            }
+
+            .flash {
+                animation: flash 0.4s ease-in-out 3;
+            }
+        </style>
+        </head>
+        <button id="biteButton">Bite the Dust 💥</button>
+        <div id="explosion"></div>
+        <script>
+            const button = document.getElementById('biteButton');
+            const explosion = document.getElementById('explosion');
+
+            button.addEventListener('click', () => {
+                explosion.style.opacity = '1';
+                explosion.classList.add('flash');
+
+                setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    explosion.style.opacity = '0';
+                    explosion.classList.remove('flash');
+                }, 3000);
+            });
+        </script>
 
 
     </section>
