@@ -26,6 +26,12 @@
         </nav>
     </header>
 
+    <section id="Radio">
+        <h1>morioh-cho-radio</h1>
+<audio controls>
+        <source src="temas\morioh-cho-radio meloboom.mp3" type="audio/mpeg">
+    </audio>
+
     <section id="Historia">
         <h1>História</h1>
         <p>A Parte 4 de JoJo's Bizarre Adventure, intitulada Diamond is Unbreakable, é ambientada na cidade fictícia de
@@ -260,6 +266,37 @@
                 </a>
             </div>
         </div>
+ <style>
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap;       /* Permite quebrar linha se não couber */
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px;             /* Espaçamento entre os quadros */
+    padding: 20px;
+}
+
+.galeria-item {
+    border: 4px solid #313681; /* Borda do "quadro" */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-item img {
+    display: block;
+    width: 200px;  /* Ajuste o tamanho das imagens */
+    height: auto;
+    border-radius: 10px;
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff66aa;
+}
+</style>
+
+    
         <style>
             #biteButton {
                 display: block;
@@ -325,24 +362,131 @@
         </style>
         </head>
         <button id="biteButton">Bite the Dust 💥</button>
-        <div id="explosion"></div>
-        <script>
-            const button = document.getElementById('biteButton');
-            const explosion = document.getElementById('explosion');
 
-            button.addEventListener('click', () => {
-                explosion.style.opacity = '1';
-                explosion.classList.add('flash');
+<!-- Efeito da explosão -->
+<div id="explosion"></div>
 
-                setTimeout(() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    explosion.style.opacity = '0';
-                    explosion.classList.remove('flash');
-                }, 3000);
-            });
-        </script>
+<!-- Killer Queen GIF com animação -->
+<img id="killerQueenGif" src="images/tenor.gif" alt="gif" width="300" />
+<audio id="kiraMusic" src="temas\bites-the-dust-jojo meloboom.mp3" preload="auto"></audio>
 
+    <section>
+<style>
+    /* Botão estilizado */
+    #biteButton {
+        display: block;
+        margin: 50px auto;
+        padding: 15px 35px;
+        background: #ff3366;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 1.3em;
+        box-shadow: 0 0 25px #ff66aa;
+        transition: all 0.2s ease;
+    }
 
+    #biteButton:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 40px #ff99cc;
+    }
+
+    /* Efeito de explosão */
+    #explosion {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, #fff 0%, #ff3366 30%, #000 100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.8s;
+        z-index: 9998;
+    }
+
+    #explosion::after {
+        content: "B I T E  T H E  D U S T";
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        color: white;
+        text-shadow: 0 0 25px #ff3366, 0 0 50px #fff;
+        font-weight: bold;
+        letter-spacing: 5px;
+    }
+
+    /* Killer Queen GIF com animação */
+    #killerQueenGif {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 400px;
+        z-index: 10000;
+        animation: growShrink 3s ease-in-out forwards;
+    }
+
+    /* Animação de crescimento e diminuição */
+    @keyframes growShrink {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+        20% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.4);
+        }
+        60% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0);
+        }
+    }
+
+    @keyframes flash {
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+    }
+</style>
+
+<script>
+    
+
+const button = document.getElementById('biteButton');
+    const explosion = document.getElementById('explosion');
+    const killerQueenGif = document.getElementById('killerQueenGif');
+    const kiraMusic = document.getElementById('kiraMusic');
+
+    button.addEventListener('click', () => {
+        // Toca a música do Kira
+        kiraMusic.currentTime = 0;
+        kiraMusic.play();
+    });
+    button.addEventListener('click', () => {
+        // Mostra o GIF e a explosão
+        killerQueenGif.style.display = 'block';
+        killerQueenGif.style.animation = 'growShrink 3s ease-in-out forwards';
+        explosion.style.opacity = '1';
+        explosion.classList.add('flash');
+
+        // Depois de 3 segundos, some tudo
+        setTimeout(() => {
+            explosion.style.opacity = '0';
+            explosion.classList.remove('flash');
+            killerQueenGif.style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 3000);
+    });
+</script>
+    </section>
     </section>
     <footer>
         <p>&copy; 2025 [projeto_website]. Todos os direitos reservados ao Hirohiko Araki.</p>
