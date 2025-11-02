@@ -1,183 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stands - JoJo's Bizarre Adventure</title>
+    <title>Personagens - JoJo's Bizarre Adventure: Diamond is Unbreakable</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
-<body>
+<body style="margin:0; padding:0; background-image: url('images/OIP.webp');; background-position:
+    center; background-attachment: fixed;">
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Página Inicial</a></li>
                 <li><a href="historia.html">História</a></li>
-                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="stands.html">Stands</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
             </ul>
         </nav>
     </header>
-    <body style="margin:0; padding:0; background-image: url('images/Jojo_part3.jpg'); background-size: cover; background-position:
-    center; background-attachment: fixed;">
 
-    <section id="stands">
-        <h1>Stands Místicos e Poderosos - Parte 4</h1>
+    <section id="personagens">
+    <h1>Personagens de JoJo's Bizarre Adventure - Parte 4: Diamond is Unbreakable</h1>
 
-        <section id="stand">
-            <img src="images/crazydiamond.webp" alt="Crazy Diamond">
-            <h2>Crazy Diamond</h2>
-            <p>Stand de Josuke Higashikata, que pode restaurar objetos e curar ferimentos.</p>
-            <ul>
-                <li><strong>Restauração:</strong> Conserta objetos quebrados e cura ferimentos em pessoas.</li>
-                <li><strong>Força Sobre-humana:</strong> Possui golpes extremamente poderosos.</li>
-            </ul>
-         </section>
-        
-        <section id="stand">
-            <img src="images/starplatinum.webp" alt="Star Platinum">
-            <h2>Star Platinum</h2>
-            <p>Stand de Jotaro Kujo, Parar o tempo.</p>
-            <ul>
-                <li><strong>Restauração:</strong> Consegue parar o tempo por 5.</li>
-                <li><strong>Força Sobre-humana:</strong> Possui golpes extremamente poderosos.</li>
-            </ul>
-         </section>
+    <style>
+        .personagem {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 0 15px #800080;
+        }
 
-              <section id="stand">
-               <img src="images/thehand.jpg" alt="The Hand">
-            <h2>The Hand</h2>
-            <p>Stand de Okkuyasu, Apagar.</p>
-            <ul>
-                <li><strong>Apagar:</strong> consegue apagar o espaço com a mão.</li>
-                <li><strong>Força Sobre-humana:</strong> Possui golpes extremamente poderosos.</li>
-            </ul>
-         </section>
+        .personagem img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .personagem h2 {
+            color: #ff66cc;
+        }
+
+        .wiki-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #ff66cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .wiki-button:hover {
+            background: #ff3399;
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #ff66cc;
+        }
+    </style>
+
+    <!-- Cada personagem agora tem um botão "Saiba mais" com link direto para a wiki -->
+
+    
+
+    <style>
+    .personagem {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: rgb(216, 154, 39);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px auto;
+        width: 80%;
+        max-width: 800px;
+        text-align: center;
+        box-shadow: 0 0 15px #800080;
+    }
+
+    .personagem img {
+        width: 250px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .personagem h2 {
+        color: #ff66cc;
+    }
+
+    .wiki-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #ff66cc;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+
+    .wiki-button:hover {
+        background: #ff3399;
+        transform: scale(1.1);
+        box-shadow: 0 0 15px #ff66cc;
+    }
+
+    /* Estilo do player de música */
+    audio {
+        margin-top: 10px;
+        width: 250px;
+        accent-color: #ff66cc; /* muda a cor do botão do player */
+        filter: drop-shadow(0 0 5px #ff99cc);
+    }
+</style>
+
+<!-- Josuke -->
+<div class="personagem">
+    <img src="images/josuke.jpg" alt="Josuke Higashikata">
+    <h2>Josuke Higashikata</h2>
+    <p><strong>Stand:</strong> Crazy Diamond</p>
+    <p>O protagonista da Parte 4. Um jovem de bom coração, mas temperamental quando zombam de seu cabelo.</p>
+<h2>josuke-theme</h2>
+    <audio controls>
+        <source src="temas\josuke-theme meloboom.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <a class="wiki-button" href="https://jojo.fandom.com/wiki/Josuke_Higashikata_(JoJo%27s_Bizarre_Adventure:_Diamond_is_Unbreakable)" target="_blank">Saiba mais</a>
+</div>
+
+<!-- Jotaro -->
+<div class="personagem">
+    <img src="images/jotaro.webp" alt="Jotaro Kujo">
+    <h2>Jotaro Kujo</h2>
+    <p><strong>Stand:</strong> Star Platinum</p>
+    <p>O JoJo da Parte 3 retorna como biólogo marinho e ajuda Josuke em Morioh.</p>
+<h2>Jotaro Kujo theme</h2>
+    <audio controls>
+        <source src="temas/jotaros-theme meloboom.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <a class="wiki-button" href="https://jojo.fandom.com/wiki/Jotaro_Kujo" target="_blank">Saiba mais</a>
+</div>
+
+<!-- Koichi -->
+<div class="personagem">
+    <img src="images/kouchi.jpg" alt="Koichi Hirose">
+    <h2>Koichi Hirose</h2>
+    <p><strong>Stand:</strong> Echoes (Act 1, 2 e 3)</p>
+    <p>Amigo leal de Josuke. Seu Stand evolui em três formas, cada uma com habilidades únicas.</p>
+
+    <a class="wiki-button" href="https://jojo.fandom.com/wiki/Koichi_Hirose" target="_blank">Saiba mais</a>
+</div>
+
+<!-- Okuyasu -->
+<div class="personagem">
+    <img src="images/okuyasu.webp" alt="Okuyasu Nijimura">
+    <h2>Okuyasu Nijimura</h2>
+    <p><strong>Stand:</strong> The Hand</p>
+    <p>Inicialmente inimigo, depois aliado de Josuke. Seu Stand apaga o espaço com a mão direita.</p>
+    
+<h2>Okuyasu theme</h2>
+    <audio controls>
+        <source src="temas\okuyasus-theme meloboom.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <a class="wiki-button" href="https://jojo.fandom.com/wiki/Okuyasu_Nijimura" target="_blank">Saiba mais</a>
+</div>
+
+<!-- Kira -->
+<div class="personagem">
+    <img src="images/kira.jpg" alt="Yoshikage Kira">
+    <h2>Yoshikage Kira</h2>
+    <p><strong>Stand:</strong> Killer Queen</p>
+    <p>O vilão principal da Parte 4. Um assassino obcecado por uma vida tranquila.</p>
+<h2>Yoshikage Kira theme</h2>
+    <audio controls>
+        <source src="temas/kiras-theme meloboom.mp3" type="audio/mpeg">
+    </audio>
+
+    <a class="wiki-button" href="https://jojo.fandom.com/wiki/Yoshikage_Kira" target="_blank">Saiba mais</a>
+</div>
+
+       
+<div class="personagem">
+        <img src="images/rohan.png" alt="Rohan Kishibe">
+        <h2>Rohan Kishibe</h2>
+        <p><strong>Stand:</strong> Heaven’s Door</p>
+        <p>Um mangaká excêntrico que pode abrir pessoas como livros e ler suas memórias.</p>
+        <a class="wiki-button" href="https://jojo.fandom.com/wiki/Rohan_Kishibe" target="_blank">Saiba mais</a>
+    </div>
+    <div class="personagem">
+        <img src="images/bolofofo.webp" alt="Shigekiyo Yangu">
+        <h2>Shigekiyo Yangu (Shigechi)</h2>
+        <p><strong>Stand:</strong> Harvest</p>
+        <p>Um garoto simples com centenas de pequenos Stands coletores.</p>
+        <a class="wiki-button" href="https://jojo.fandom.com/wiki/Shigekiyo_Yangu" target="_blank">Saiba mais</a>
+    </div>
+
+    <div class="personagem">
+        <img src="images/rosa.jpg" alt="Reimi Sugimoto">
+        <h2>Reimi Sugimoto</h2>
+        <p><strong>Stand:</strong> Arrow's Spirit (fantasma)</p>
+        <p>Fantasma de uma garota assassinada por Kira que ajuda os protagonistas.</p>
+        <a class="wiki-button" href="https://jojo.fandom.com/wiki/Reimi_Sugimoto" target="_blank">Saiba mais</a>
+    </div>
 
 
-        <section id="stand">
-               <img src="images/echoes.webp" alt="Echoes">
-            <h2>Echoes</h2>
-            <p>Stand de Koichi Hirose que evolui em diferentes atos, cada um com habilidades distintas.</p>
-            <ul>
-                <li><strong>Echoes Act 1:</strong> Adiciona efeitos sonoros às palavras escritas em objetos.</li>
-                <li><strong>Echoes Act 2:</strong> Faz sons físicos que afetam o ambiente.</li>
-                <li><strong>Echoes Act 3:</strong> Pode aumentar o peso de qualquer coisa que toque.</li>
-            </ul>
-        </section>
+    <div class="personagem">
+        <img src="images/yukak.webp" alt="Yukako Yamagishi">
+        <h2>Yukako Yamagishi</h2>
+        <p><strong>Stand:</strong> Love Deluxe</p>
+        <p>Garota apaixonada por Koichi. Controla seu cabelo como arma.</p>
+        <a class="wiki-button" href="https://jojo.fandom.com/wiki/Yukako_Yamagishi" target="_blank">Saiba mais</a>
+    </div>
 
-        <section id="stand">
-          <img src="images/heavendoor.webp" alt="Heaven's Door">
-            <h2>Heaven's Door</h2>
-            <p>Stand de Rohan Kishibe que transforma pessoas em livros e permite ler ou escrever nelas.</p>
-            <ul>
-                <li><strong>Leitura de Memórias:</strong> Permite ler a vida e pensamentos de qualquer pessoa.</li>
-                <li><strong>Manipulação:</strong> Pode escrever ordens que a pessoa deve obedecer.</li>
-            </ul>
-         </section>
 
-        <section id="stand">
-               <img src="images/killerquenn.webp" alt="Killer Queen">
-            <h2>Killer Queen</h2>
-            <p>Stand de Yoshikage Kira que transforma qualquer coisa que toca em bomba.</p>
-            <ul>
-                <li><strong>Bombas:</strong> Qualquer objeto tocado se transforma em explosivo.</li>
-                <li><strong>Bites the Dust:</strong> Cria loops temporais para proteger Kira.</li>
-            </ul>
-        </section>
+    <div class="personagem">
+        <img src="images/toto.jpg" alt="Tonio Trussardi">
+        <h2>Tonio Trussardi</h2>
+        <p><strong>Stand:</strong> Pearl Jam</p>
+        <p>Chef italiano que cura doenças através da culinária.</p>
+        <a class="wiki-button" href="https://jojo.fandom.com/wiki/Tonio_Trussardi" target="_blank">Saiba mais</a>
+    </div>
 
-        <section id="stand">
-              <img src="images/sheerheartattack.png" alt="Sheer Heart Attack">
-            <h2>Sheer Heart Attack</h2>
-            <p>Parte do Killer Queen, é uma arma autônoma que persegue calor e destrói tudo.</p>
-            <ul>
-                <li><strong>Indestrutível:</strong> Não pode ser destruída por meios convencionais.</li>
-                <li><strong>Caça de Calor:</strong> Sempre persegue fontes de calor.</li>
-            </ul>
-         </section>
 
-        <section id="stand">
-               <img src="images/bitesthedust.png" alt="Bites the Dust">
-            <h2>Bites the Dust</h2>
-            <p>Sub-Stand de Killer Queen que cria loops temporais para proteger Kira.</p>
-            <ul>
-                <li><strong>Loop Temporal:</strong> Repete o tempo para impedir que segredos de Kira sejam revelados.</li>
-                <li><strong>Proteção Mortal:</strong> Mata qualquer pessoa que descubra a identidade de Kira.</li>
-            </ul>
-         </section>
+    <div class="personagem">
+        <img src="images/akira_otoishi__render__by_yessing_dfma8c3-pre.png" alt="Akira Otoishi">
+        <h2>Akira Otoishi</h2>
+        <p><strong>Stand:</strong> Red Hot Chili Pepper</p>
+        <p>Vilão elétrico que rouba energia e velocidade através da eletricidade.</p>
+        <a class="wiki-button" href="https://jojo.fandom.com/wiki/Akira_Otoishi" target="_blank">Saiba mais</a>
+    </div>
 
-        <section id="stand">
-               <img src="images/redhotchilipepper[.jpg" alt="Red Hot Chili Pepper">
-            <h2>Red Hot Chili Pepper</h2>
-            <p>Stand de Akira Otoishi que controla eletricidade e se move através de fios elétricos.</p>
-            <ul>
-                <li><strong>Controle Elétrico:</strong> Manipula e viaja pelos fios elétricos.</li>
-                <li><strong>Choque Letal:</strong> Ataca inimigos com descargas elétricas poderosas.</li>
-            </ul>
-         </section>
+    <div class="personagem">
+        <img src="images/5688-869048183.jpg" alt="Yoshihiro Kira">
+        <h2>Yoshihiro Kira</h2>
+        <p><strong>Stand:</strong> Atom Heart Father</p>
+        <p>Pai de Kira, vive dentro de uma fotografia após a morte.</p>
+        <a class="wiki-button" href="https://jojo.fandom.com/wiki/Yoshihiro_Kira" target="_blank">Saiba mais</a>
+    </div>
 
-        <section id="stand">
-           <img src="images/lovedeluxe.webp" alt="Love Deluxe">
-            <h2>Love Deluxe</h2>
-            <p>Stand de Yukako Yamagishi que controla completamente seu próprio cabelo.</p>
-            <ul>
-                <li><strong>Controle de Cabelos:</strong> Pode atacar, capturar ou manipular inimigos com os cabelos.</li>
-                <li><strong>Alta Precisão:</strong> Cabelos controlados com extrema precisão.</li>
-            </ul>
-         </section>
-
-        <section id="stand">
-             <img src="images/badcompany.webp" alt="Bad Company">
-            <h2>Bad Company</h2>
-            <p>Stand de Keicho Nijimura que possui um exército de miniaturas armadas.</p>
-            <ul>
-                <li><strong>Exército Armado:</strong> Mini soldados equipados com armas de fogo e granadas.</li>
-                <li><strong>Tática Militar:</strong> Pode atacar em formação coordenada.</li>
-            </ul>
-        </section>
-
-        <section id="stand">
-              <img src="images/Harvest.webp" alt="Havest">
-            <h2>Havest</h2>
-            <p>Stand de Shigekiyo Yangu que utiliza pequenas criaturas para atacar.</p>
-            <ul>
-                <li><strong>Pequenas Criaturas:</strong> Atacam inimigos em grande número.</li>
-                <li><strong>Dispersão:</strong> Pode se espalhar rapidamente pelo ambiente.</li>
-            </ul>
-         </section>
-
-        <section id="stand">
-             <img src="images/Cinderela.webp" alt="Cinderella">
-            <h2>Cinderella</h2>
-            <p>Stand de Shigekiyo que manipula objetos e peso.</p>
-            <ul>
-                <li><strong>Controle de Peso:</strong> Pode aumentar ou diminuir o peso de objetos.</li>
-                <li><strong>Ataque Criativo:</strong> Usa objetos comuns para atacar inimigos.</li>
-            </ul>
-         </section>
-
-        <section id="stand">
-               <img src="images/highwaystar.webp" alt="Highway Star">
-            <h2>Highway Star</h2>
-            <p>Stand de Yuya Fungami, persegue inimigos e drena energia deles.</p>
-            <ul>
-                <li><strong>Perseguição Incansável:</strong> Nunca perde o alvo.</li>
-                <li><strong>Dreno de Energia:</strong> Sugando a energia vital da vítima.</li>
-            </ul>
-         </section>
-
-        <section id="stand">
-               <img src="images/chiptreack.webp" alt="Cheap Trick">
-            <h2>Cheap Trick</h2>
-            <p>Stand de Kira, gruda em costas e mata se descoberto.</p>
-            <ul>
-                <li><strong>Adesão Fatal:</strong> Gruda nas costas da vítima.</li>
-                <li><strong>Morte Automática:</strong> Mata se a pessoa revelar seu segredo.</li>
-            </ul>
-         </section>
-
-    </section>
+    
 <style>
             #biteButton {
                 display: block;
@@ -373,4 +447,5 @@ const button = document.getElementById('biteButton');
         <p>&copy; 2025 Projeto JoJo - Diamond is Unbreakable. Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>
